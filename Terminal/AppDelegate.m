@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "JMTerminalViewController.h"
 #import "JMTerminalViewModel.h"
+#import "BLE.h"
 
 @implementation AppDelegate
 {
@@ -16,17 +17,20 @@
 	
 	UIWindow* _mainWindow;
 	JMTerminalViewController* _terminalViewController;
-	JMFSKModem* _modem;
+	BLE* _bleManager;
 }
             
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	JMTerminalViewModel* terminalViewModel = [[JMTerminalViewModel alloc]init];
+	_bleManager = [[BLE alloc]init];
+	JMTerminalViewModel* terminalViewModel = [[JMTerminalViewModel alloc]initWithBLEManager:_bleManager];
 	_terminalViewController = [[JMTerminalViewController alloc]initWithViewModel:terminalViewModel];
+	
+	UINavigationController* navigationController = [[UINavigationController alloc]initWithRootViewController:_terminalViewController];
 
 	_mainWindow = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-	_mainWindow.rootViewController = _terminalViewController;
+	_mainWindow.rootViewController = navigationController;
 	[_mainWindow makeKeyAndVisible];
 	
 	return YES;

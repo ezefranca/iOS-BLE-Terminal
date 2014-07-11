@@ -8,14 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@class JMFSKModem;
+@class BLE;
 
 @interface JMTerminalViewModel : NSObject
 
 @property (nonatomic, strong, readonly) NSString* receivedText;
 
--(instancetype)initWithModem:(JMFSKModem*)modem;
+-(instancetype)initWithBLEManager:(BLE*)manager;
 
 -(void) sendMessage:(NSString*)message;
+-(void) connect;
 
 @end

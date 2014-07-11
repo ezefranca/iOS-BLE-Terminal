@@ -14,6 +14,7 @@
 		B41184A2196DD9D7004EB8F4 /* JMTerminalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41184A1196DD9D7004EB8F4 /* JMTerminalViewController.m */; };
 		B41184A5196DD9E4004EB8F4 /* JMTerminalView.m in Sources */ = {isa = PBXBuildFile; fileRef = B41184A4196DD9E4004EB8F4 /* JMTerminalView.m */; };
 		B4AA359919703EBA002E47B0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4AA359819703EBA002E47B0 /* CoreBluetooth.framework */; };
+		B4AA359E19703F72002E47B0 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AA359C19703F72002E47B0 /* BLE.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		B41184A3196DD9E4004EB8F4 /* JMTerminalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMTerminalView.h; sourceTree = "<group>"; };
 		B41184A4196DD9E4004EB8F4 /* JMTerminalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTerminalView.m; sourceTree = "<group>"; };
 		B4AA359819703EBA002E47B0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		B4AA359B19703F72002E47B0 /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
+		B4AA359C19703F72002E47B0 /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
+		B4AA359D19703F72002E47B0 /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				B4AA359819703EBA002E47B0 /* CoreBluetooth.framework */,
+				B4AA359A19703F72002E47B0 /* BLE */,
 				B4118460196DD86B004EB8F4 /* Terminal */,
 				B411845F196DD86B004EB8F4 /* Products */,
 			);
@@ -85,6 +90,17 @@
 				B4118463196DD86B004EB8F4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4AA359A19703F72002E47B0 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				B4AA359B19703F72002E47B0 /* BLE.h */,
+				B4AA359C19703F72002E47B0 /* BLE.m */,
+				B4AA359D19703F72002E47B0 /* BLEDefines.h */,
+			);
+			name = BLE;
+			path = libraries/ble/BLEFramework/BLE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +175,7 @@
 				B4118467196DD86B004EB8F4 /* AppDelegate.m in Sources */,
 				B41184A5196DD9E4004EB8F4 /* JMTerminalView.m in Sources */,
 				B411849F196DD9BF004EB8F4 /* JMTerminalViewModel.m in Sources */,
+				B4AA359E19703F72002E47B0 /* BLE.m in Sources */,
 				B4118464196DD86B004EB8F4 /* main.m in Sources */,
 				B41184A2196DD9D7004EB8F4 /* JMTerminalViewController.m in Sources */,
 			);
